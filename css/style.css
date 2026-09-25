@@ -18,7 +18,7 @@
   /* Text */
   --text-primary: #f5f7fa;   /* main readable text, off-white (not pure white — softer on dark bg) */
   --text-secondary: #a0a8b8; /* secondary text — category labels, prices, meta info */
-  --text-muted: #6b7280;     /* least important text — placeholders */
+  --text-muted: #828aa0;    /* least important text — placeholders */
 
   /* Borders */
   --border-color: #2a3040;
