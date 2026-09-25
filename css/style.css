@@ -137,7 +137,7 @@ ul {
 
 .main-nav a:hover,
 .main-nav a.active {
-  color: var(--accent);
+  color: var(--accent-hover);
 }
 
 .header-icons {
@@ -518,11 +518,10 @@ ul {
 }
 
 .product-rating {
-  color: var(--accent);
+  color: var(--accent-hover);
   font-size: 0.75rem;
   margin-bottom: 6px;
 }
-
 .product-price {
   font-weight: 700;
   font-size: 0.95rem;
