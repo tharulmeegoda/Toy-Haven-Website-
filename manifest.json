@@ -1,0 +1,21 @@
+{
+  "name": "Toy Haven",
+  "short_name": "Toy Haven",
+  "description": "Collectible figurines, Funko Pops, model cars, board games and toys.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0b0e14",
+  "theme_color": "#0b0e14",
+  "icons": [
+    {
+      "src": "favicon/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

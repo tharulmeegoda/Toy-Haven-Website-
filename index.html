@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toy Haven — Collectibles, Toys & Board Games</title>
+  <meta name="description" content="Toy Haven — browse action figures, Funko Pops, model cars, board games and toys in one place.">
+  <link rel="icon" type="image/png" href="favicon/favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="favicon/icon-192.png">
+  <meta name="theme-color" content="#0b0e14">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ HEADER (identical on every page) ============ -->
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">TOY HAVEN</div>
+
+      <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="products.html">Products</a>
+        <a href="collection.html">Collection</a>
+        <a href="support.html">Support</a>
+      </nav>
+
+      <div class="header-icons">
+        <a href="collection.html" aria-label="Wishlist">♡</a>
+        <a href="cart.html" aria-label="Shopping cart">
+          🛒
+          <span id="cart-count" class="cart-count">0</span>
+        </a>
+        <button class="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO CAROUSEL (full-width, outside the container) ============ -->
+  <section class="hero-full" aria-label="Promotions">
+    <div class="hero-inner">
+
+      <div class="hero-slide active" data-bg="images/hero/1/legobat.jpg">
+        <div class="hero-text">
+          <p class="hero-eyebrow"></p>
+          <h1>The Collection Keeps Growing</h1>
+          <p>New Releases • Funko Pops • Diecast Cars • Action Figures</p>
+          <a href="products.html" class="btn btn-primary">Explore Collection</a>
+        </div>
+      </div>
+
+      <div class="hero-slide" data-bg="images/hero/2/2511945.jpg">
+        <div class="hero-text">
+          <p class="hero-eyebrow">NEW THIS WEEK</p>
+          <h1>Fresh Funko Pops Just Landed</h1>
+          <p>Marvel, DC, and Movie exclusives — while supplies last.</p>
+          <a href="products.html" class="btn btn-primary">Shop Funko Pops</a>
+        </div>
+      </div>
+
+      <div class="hero-slide" data-bg="images/hero/3/yNQPDRgwKSz645qPKvAdC5.jpg">
+        <div class="hero-text">
+          <p class="hero-eyebrow">FOR THE COLLECTORS</p>
+          <h1>Precision Diecast Model Cars</h1>
+          <p>F1 grid cars and Bburago classics, built to scale.</p>
+          <a href="products.html" class="btn btn-primary">Shop Model Cars</a>
+        </div>
+      </div>
+
+      <div class="hero-slide" data-bg="images/hero/4/1411451.jpg">
+        <div class="hero-text">
+          <p class="hero-eyebrow">COMING SOON</p>
+          <h1>Avengers: Doomsday Collectibles</h1>
+          <p>Be first in line when the new lineup drops.</p>
+          <a href="products.html" class="btn btn-primary">Get Notified</a>
+        </div>
+      </div>
+
+      <div class="hero-footer">
+        <p style="font-size:0.75rem; color:var(--text-muted);">New Releases &bull; Funko Pops &bull; Diecast Cars &bull; Action Figures</p>
+        <div class="hero-dots">
+          <span class="hero-dot active"></span>
+          <span class="hero-dot"></span>
+          <span class="hero-dot"></span>
+          <span class="hero-dot"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- ============ NEWLY RELEASED ============ -->
+    <section class="reveal">
+      <h2 class="section-title" style="margin-top: var(--space-xl);">Newly Released</h2>
+      <p class="section-subtitle">Fresh additions to Toy Haven</p>
+      <div id="newly-released-grid" class="product-grid">
+        <!-- filled by main.js -->
+      </div>
+    </section>
+
+    <!-- ============ COMING SOON ============ -->
+    <section class="reveal">
+      <h2 class="section-title">Coming Soon</h2>
+      <p class="section-subtitle">Upcoming collectibles and featured releases</p>
+      <div id="coming-soon-grid" class="product-grid">
+        <!-- filled by main.js -->
+      </div>
+    </section>
+
+    <!-- ============ SHOP BY CATEGORY ============ -->
+    <section class="reveal">
+      <h2 class="section-title">Shop by Category</h2>
+      <div class="category-grid">
+        <a href="products.html?category=Action%20Figures" class="category-tile">
+          <div class="category-tile-image">
+            <img src="images/shop by category pics/figures/dmiuu3f-df78caf3-c90e-4297-878c-dc7db9a0f4cd.png" alt="Figurines" onerror="this.parentElement.classList.add('image-missing');">
+            <span class="image-placeholder">CATEGORY</span>
+          </div>
+          <p>Figurines</p>
+        </a>
+        <a href="products.html?category=Toys" class="category-tile">
+          <div class="category-tile-image">
+            <img src="images/toys/6063968-rubik-s-cube-the-original-3x3-colour-matching-puzzle-classic-problem-solving-cube-removebg-preview.png" alt="Toys" onerror="this.parentElement.classList.add('image-missing');">
+            <span class="image-placeholder">CATEGORY</span>
+          </div>
+          <p>Toys</p>
+        </a>
+        <a href="products.html?category=Board%20Games" class="category-tile">
+          <div class="category-tile-image">
+            <img src="images/board-games/816dE7TY9xL-removebg-preview.png" alt="Board Games" onerror="this.parentElement.classList.add('image-missing');">
+            <span class="image-placeholder">CATEGORY</span>
+          </div>
+          <p>Board Games</p>
+        </a>
+        <a href="products.html?category=Model%20Cars" class="category-tile">
+          <div class="category-tile-image">
+            <img src="images/shop by category pics/diecast cars/Batman-Futuristic-Automobile-Render-PNG.png" alt="Diecast Cars" onerror="this.parentElement.classList.add('image-missing');">
+            <span class="image-placeholder">CATEGORY</span>
+          </div>
+          <p>Diecast Cars</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCT OF THE DAY ============ -->
+    <section class="reveal">
+      <h2 class="section-title">Product of the Day</h2>
+      <p class="section-subtitle">A featured pick, refreshed daily</p>
+      <div id="product-of-day" style="max-width: 280px;">
+        <!-- filled by main.js -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER (identical on every page) ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Toy Haven</h3>
+          <p style="color: var(--text-secondary); font-size: 0.85rem;">Collectible figurines, board games, toys and diecast model cars, all in one place.</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="collection.html">Collection</a></li>
+            <li><a href="support.html">Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Newsletter</h3>
+          <form id="newsletter-form" class="newsletter-form" novalidate>
+            <label for="newsletter-email" class="sr-only" style="position:absolute; left:-9999px;">Email address</label>
+            <input type="email" id="newsletter-email" placeholder="Your email address">
+            <button type="submit" class="btn btn-primary">Join</button>
+          </form>
+          <p id="newsletter-message" class="newsletter-message"></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Toy Haven. University project — not a real store.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/shopping-cart.js"></script>
+  <script src="js/collection.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — Toy Haven</title>
+  <meta name="description" content="Get help or send feedback to the Toy Haven team.">
+  <link rel="icon" type="image/png" href="favicon/favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="favicon/icon-192.png">
+  <meta name="theme-color" content="#0b0e14">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">TOY HAVEN</div>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="collection.html">Collection</a>
+        <a href="support.html" class="active">Support</a>
+      </nav>
+
+      <div class="header-icons">
+        <a href="collection.html" aria-label="Wishlist">♡</a>
+        <a href="cart.html" aria-label="Shopping cart">
+          🛒
+          <span id="cart-count" class="cart-count">0</span>
+        </a>
+        <button class="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Support</h1>
+
+    <div class="support-layout">
+      <!-- ============ FEEDBACK FORM ============ -->
+      <div>
+        <h2 class="section-title">Send Feedback</h2>
+        <form id="feedback-form" novalidate>
+
+          <div class="form-group">
+            <label for="feedback-name">Name</label>
+            <input type="text" id="feedback-name">
+            <p id="feedback-name-error" class="form-error"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="feedback-email">Email</label>
+            <input type="email" id="feedback-email">
+            <p id="feedback-email-error" class="form-error"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="feedback-message">Message</label>
+            <textarea id="feedback-message" rows="5"></textarea>
+            <p id="feedback-message-error" class="form-error"></p>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit Feedback</button>
+          <p id="feedback-confirmation" class="feedback-confirmation">Thanks — your feedback has been received!</p>
+        </form>
+      </div>
+
+      <!-- ============ FAQ ACCORDION ============ -->
+      <div>
+        <h2 class="section-title">FAQ</h2>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How long does delivery take?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Standard delivery takes 3–5 business days. This is a university project, so no real orders are shipped.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I return a collectible?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Unopened items can be returned within 30 days of purchase in a real store — this demo doesn't process real returns.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What payment methods are accepted?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Card and Cash on Delivery are available at checkout on this site.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How does the Collection page work?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Tap the heart on any product card to save it, then sort it into Interested, Owned, or Not Interested on the Collection page.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Toy Haven</h3>
+          <p style="color: var(--text-secondary); font-size: 0.85rem;">Collectible figurines, board games, toys and diecast model cars, all in one place.</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="collection.html">Collection</a></li>
+            <li><a href="support.html">Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Newsletter</h3>
+          <form id="newsletter-form" class="newsletter-form" novalidate>
+            <label for="newsletter-email" class="sr-only" style="position:absolute; left:-9999px;">Email address</label>
+            <input type="email" id="newsletter-email" placeholder="Your email address">
+            <button type="submit" class="btn btn-primary">Join</button>
+          </form>
+          <p id="newsletter-message" class="newsletter-message"></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Toy Haven. University project — not a real store.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/shopping-cart.js"></script>
+  <script src="js/collection.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/support.js"></script>
+</body>
+</html>
