@@ -1,7 +1,4 @@
-/* ==========================================================================
-   TOY HAVEN — GLOBAL STYLESHEET
-   Organized top-to-bottom to match how a page is built, per section.
-   ========================================================================== */
+
 
 /* --------------------------------------------------------------------------
    1. CSS VARIABLES (theme) — change a color here, it updates everywhere.
@@ -638,8 +635,8 @@ ul {
 .filter-pill.active {
   background-color: var(--accent);
   color: #fff;
-  border-color: var(--accent);
 }
+
 
 /* --------------------------------------------------------------------------
    10. PRODUCT MODAL (quick-view — satisfies "filtering and modal display")
