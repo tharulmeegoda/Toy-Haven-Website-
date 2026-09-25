@@ -989,7 +989,7 @@ ul {
 }
 
 .faq-question .faq-icon {
-  color: var(--accent);
+  color: var(--accent-hover);
   transition: transform var(--transition);
 }
 
