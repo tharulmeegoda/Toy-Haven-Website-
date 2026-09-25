@@ -101,8 +101,7 @@ function displayCart() {
   const cart = getShoppingCart();
 
   if (cart.length === 0) {
-    container.innerHTML = `<p style="color: var(--text-secondary);">Your cart is empty. <a href="products.html" style="color: var(--accent);">Browse products</a></p>`;
-  } else {
+    container.innerHTML = `<p style="color: var(--text-secondary);">Your cart is empty. <a href="products.html" style="color: var(--accent-hover);">Browse products</a></p>`;
     container.innerHTML = cart.map(createCartItemHTML).join("");
   }
 
