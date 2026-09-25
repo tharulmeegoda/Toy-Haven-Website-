@@ -1,11 +1,4 @@
-/*
-  CHECKOUT.JS
-  ------------------------------------------------------------------
-  Runs only on checkout.html: builds the Order Summary from the
-  current cart, validates the customer details form, and on a
-  successful submit — saves an order record, clears the cart, and
-  shows the "Order Confirmed" panel.
-*/
+
 
 // ============================================================
 // ORDER SUMMARY (reads the cart, same way cart.html does)

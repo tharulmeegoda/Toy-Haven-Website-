@@ -1,9 +1,4 @@
-/*
-  SUPPORT.JS
-  ------------------------------------------------------------------
-  Runs only on support.html: validates and saves the feedback form,
-  and handles the FAQ accordion open/close.
-*/
+
 
 // ============================================================
 // FEEDBACK FORM

@@ -1,11 +1,4 @@
-/*
-  PRODUCTS-PAGE.JS
-  ------------------------------------------------------------------
-  Runs ONLY on products.html: search box, category filter pills,
-  the product grid, and the quick-view modal. Uses createProductCardHTML()
-  from main.js — the SAME function Home page uses — so a card looks
-  identical everywhere without copying the HTML string twice.
-*/
+
 
 let currentCategory = "All";
 let currentSearchTerm = "";

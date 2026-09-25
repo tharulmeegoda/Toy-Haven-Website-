@@ -1,10 +1,4 @@
-/*
-  SHOPPING-CART.JS
-  ------------------------------------------------------------------
-  Handles all cart DATA and DISPLAY. The data functions (top half)
-  run on every page for the header badge. The display functions
-  (bottom half) only run if cart.html's elements exist on the page.
-*/
+
 
 const CART_STORAGE_KEY = "toyhaven_cart";
 

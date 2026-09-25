@@ -1,17 +1,3 @@
-/*
-  SERVICE-WORKER.JS
-  ------------------------------------------------------------------
-  A minimal service worker — the piece that lets browsers treat
-  Toy Haven as an installable app (the "Add to Home Screen" /
-  install prompt requires one, alongside the manifest).
-
-  It does ONE simple thing: cache the core files on install, then
-  try to serve from that cache first before hitting the network.
-  This means the site still loads (though with old data) if the
-  connection drops — good enough for an academic project, without
-  a more advanced caching strategy that would be hard to explain
-  in a viva.
-*/
 
 const CACHE_NAME = "toy-haven-cache-v1";
 

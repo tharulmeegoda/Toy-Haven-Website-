@@ -1,10 +1,4 @@
-/*
-  MAIN.JS
-  ------------------------------------------------------------------
-  Shared functionality used across the WHOLE website (every page
-  includes this file). Page-specific logic (product filtering,
-  cart display, checkout, etc.) lives in its own file instead.
-*/
+
 
 // ============================================================
 // 1. MOBILE NAVIGATION (hamburger menu)

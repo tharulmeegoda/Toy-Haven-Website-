@@ -1,10 +1,5 @@
 /*
-  PRODUCTS.JS
-  ------------------------------------------------------------------
-  This is our single source of product data — a plain array of
-  objects. Every page (Home, Products, Collection) reads from this
-  SAME array instead of each page having its own copy of the data.
-
+  
   Fields:
     id         - unique number, used to find a product later (cart, wishlist)
     name       - product name shown on the card

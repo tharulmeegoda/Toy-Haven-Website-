@@ -1,11 +1,4 @@
-/*
-  COLLECTION.JS
-  ------------------------------------------------------------------
-  Handles the wishlist/collection feature. The data functions (top
-  half) are loaded on EVERY page because the heart button on product
-  cards (Home, Products) needs them. The display functions (bottom
-  half) only run if collection.html's column elements exist.
-*/
+
 
 const WISHLIST_STORAGE_KEY = "toyhaven_wishlist";
 
