@@ -21,6 +21,31 @@ function getShoppingCart() {
 function saveShoppingCart(cart) {
   localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
 }
+// Shows a brief message at the bottom of the screen that fades in,
+// stays for a couple seconds, then fades out and removes itself.
+// Creates its own element each time — no HTML markup needed on any page.
+function showToast(message) {
+  // Remove any toast already on screen first, in case of rapid clicks
+  const existing = document.querySelector(".toast-notification");
+  if (existing) existing.remove();
+
+  const toast = document.createElement("div");
+  toast.className = "toast-notification";
+  toast.textContent = message;
+  document.body.appendChild(toast);
+
+  // Tiny delay before adding "visible" so the fade-in transition
+  // actually has something to animate from (adding the class in the
+  // same instant as creating the element would skip straight to the
+  // end state with no visible animation).
+  setTimeout(() => toast.classList.add("visible"), 10);
+
+  // Fade out and remove after 2.5 seconds
+  setTimeout(() => {
+    toast.classList.remove("visible");
+    setTimeout(() => toast.remove(), 300); // wait for the fade-out transition to finish first
+  }, 2500);
+}
 
 // Adds a product to the cart by id. If it's already in the cart,
 // increase its quantity instead of adding a duplicate row.
@@ -37,7 +62,13 @@ function addToCart(productId) {
 
   saveShoppingCart(cart);
   updateCartCount();
-  displayCart(); // if we're on the cart page, refresh it immediately
+  displayCart();
+
+  // Show a confirmation toast using the actual product's name
+  const product = products.find((p) => p.id === productId);
+  if (product) {
+    showToast(`${product.name} added to cart!`);
+  }
 }
 
 // Adds up the quantity of every item in the cart — the number shown

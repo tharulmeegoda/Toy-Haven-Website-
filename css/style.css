@@ -272,6 +272,33 @@ ul {
 }
 
 /* --------------------------------------------------------------------------
+   TOAST NOTIFICATION (brief confirmation message, e.g. "Added to cart!")
+   -------------------------------------------------------------------------- */
+.toast-notification {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background-color: var(--bg-card);
+  border: 1px solid var(--accent);
+  color: var(--text-primary);
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0;
+  z-index: 300;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+.toast-notification.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* --------------------------------------------------------------------------
    6. HERO CAROUSEL (Home page)
    -------------------------------------------------------------------------- */
 .hero-full {
