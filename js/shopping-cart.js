@@ -68,7 +68,7 @@ function createCartItemHTML(cartItem) {
   if (!product) return ""; // safety check in case product data changed
 
   const price = Number(product.price); // CHANGED — force it to a real number
-  const subtotal = product.price * cartItem.quantity;
+  const subtotal = price * cartItem.quantity;
 
     return `
     <div class="cart-item" data-id="${product.id}">
@@ -103,6 +103,7 @@ function displayCart() {
 
   if (cart.length === 0) {
     container.innerHTML = `<p style="color: var(--text-secondary);">Your cart is empty. <a href="products.html" style="color: var(--accent-hover);">Browse products</a></p>`;
+  } else {
     container.innerHTML = cart.map(createCartItemHTML).join("");
   }
 
