@@ -67,9 +67,10 @@ function createCartItemHTML(cartItem) {
   const product = products.find((p) => p.id === cartItem.id);
   if (!product) return ""; // safety check in case product data changed
 
+  const price = Number(product.price); // CHANGED — force it to a real number
   const subtotal = product.price * cartItem.quantity;
 
-  return `
+    return `
     <div class="cart-item" data-id="${product.id}">
       <div class="cart-item-image">
         <img src="${product.image}" alt="${product.name}" onerror="this.parentElement.classList.add('image-missing');">
@@ -77,7 +78,7 @@ function createCartItemHTML(cartItem) {
       </div>
       <div class="cart-item-details">
         <h3>${product.name}</h3>
-        <p class="cart-item-price">$${product.price.toFixed(2)} each</p>
+        <p class="cart-item-price">$${price.toFixed(2)} each</p>
         <p class="cart-item-subtotal">Subtotal: $${subtotal.toFixed(2)}</p>
       </div>
       <div class="qty-stepper">
