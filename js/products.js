@@ -16,7 +16,8 @@
 
 const products = [
   // ---------- ACTION FIGURES ----------
-  { id: 1, name: "Spider-Man Deluxe Figure", category: "Action Figures", subcategory: "Marvel", price: 24.99, rating: 4.8, status: "New", image: "images/action-figures/marvel/image-2026-07-24T174220.916-removebg-preview.png" },
+  { 
+    id: 1, name: "Spider-Man Deluxe Figure",category: "Action Figures",subcategory: "Marvel", price: 24.99, rating: 4.8, status: "New", image: "images/action-figures/marvel/image-2026-07-24T174220.916-removebg-preview.png" },
   { id: 2, name: " Armored Batman Figure-2016", category: "Action Figures", subcategory: "DC", price: 25.99, rating: 4.8, status: "", image: "images/action-figures/dc/616dEpja3nL._AC_UF894_1000_QL80_-removebg-preview.png" },
   { id: 3, name: "Robin Figure", category: "Action Figures", subcategory: "DC", price: 19.99, rating: 4.5, status: "", image: "images/action-figures/dc/4fa4f5de-c607-40b0-8a80-b0f6e76b1477-removebg-preview.png" },
   { id: 4, name: "Avengers: Doomsday- Dr.Doom Exclusive Figure", category: "Action Figures", subcategory: "Marvel", price: 29.99, rating: 4.9, status: "Coming Soon", image: "images/action-figures/marvel/hot-toys-marvel-doctor-doom-uk.webp" },
