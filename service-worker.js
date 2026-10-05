@@ -24,6 +24,7 @@ const CORE_FILES = [
 
 // On install: download and store every core file in the cache.
 self.addEventListener("install", (event) => {
+  self.skipWaiting(); // activate worker immediately
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => cache.addAll(CORE_FILES))
   );
@@ -63,4 +64,5 @@ self.addEventListener("activate", (event) => {
       )
     )
   );
+  self.clients.claim(); // become available to all pages
 });
