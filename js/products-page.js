@@ -154,3 +154,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initFilterPills();
   initProductModal();
 });
+
+

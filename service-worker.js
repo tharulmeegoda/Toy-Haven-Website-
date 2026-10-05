@@ -32,10 +32,25 @@ self.addEventListener("install", (event) => {
 // On every network request: check the cache first. If it's there,
 // serve it instantly. If not, fall back to a normal network request.
 self.addEventListener("fetch", (event) => {
+  // Only handle GET requests for files on our own site. Ignore
+  // everything else (POST requests, Google Fonts, browser extensions,
+  // etc.) and let the browser handle those normally — trying to
+  // manage those ourselves is what was causing the "Failed to fetch"
+  // error, since we have no cached fallback for files we never saved.
+  if (event.request.method !== "GET") return;
+  if (!event.request.url.startsWith(self.location.origin)) return;
+
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      return cachedResponse || fetch(event.request);
-    })
+    fetch(event.request)
+      .then((response) => response)
+      .catch(() => {
+        return caches.match(event.request).then((cached) => {
+          // If there's genuinely nothing cached for this either,
+          // return a plain error response instead of undefined —
+          // undefined is what was causing the crash.
+          return cached || new Response("Offline and not cached.", { status: 503 });
+        });
+      })
   );
 });
 
