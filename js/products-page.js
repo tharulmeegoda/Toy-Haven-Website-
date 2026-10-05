@@ -1,5 +1,6 @@
 
 
+
 let currentCategory = "All";
 let currentSearchTerm = "";
 
