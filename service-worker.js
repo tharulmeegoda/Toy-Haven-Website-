@@ -32,25 +32,25 @@ self.addEventListener("install", (event) => {
 // On every network request: check the cache first. If it's there,
 // serve it instantly. If not, fall back to a normal network request.
 self.addEventListener("fetch", (event) => {
-  // Only handle GET requests for files on our own site. Ignore
-  // everything else (POST requests, Google Fonts, browser extensions,
-  // etc.) and let the browser handle those normally — trying to
-  // manage those ourselves is what was causing the "Failed to fetch"
-  // error, since we have no cached fallback for files we never saved.
-  if (event.request.method !== "GET") return;
-  if (!event.request.url.startsWith(self.location.origin)) return;
+  const requestUrl = event.request.url;
+
+  // Only step in for our core shell files (the ones actually saved
+  // during install — see CORE_FILES above). Everything else — product
+  // images, hero images, Google Fonts, etc. — is left completely
+  // alone and handled by a normal browser request, exactly as if this
+  // service worker didn't exist. This is what avoids ever generating
+  // a fake error response for files we never promised to manage.
+  const isCoreFile = CORE_FILES.some((file) => requestUrl.endsWith(file));
+  if (event.request.method !== "GET" || !isCoreFile) {
+    return; // do nothing — browser handles this request normally
+  }
 
   event.respondWith(
-    fetch(event.request)
-      .then((response) => response)
-      .catch(() => {
-        return caches.match(event.request).then((cached) => {
-          // If there's genuinely nothing cached for this either,
-          // return a plain error response instead of undefined —
-          // undefined is what was causing the crash.
-          return cached || new Response("Offline and not cached.", { status: 503 });
-        });
-      })
+    fetch(event.request).catch(() => {
+      return caches.match(event.request).then((cached) => {
+        return cached || new Response("Offline and not cached.", { status: 503 });
+      });
+    })
   );
 });
 
