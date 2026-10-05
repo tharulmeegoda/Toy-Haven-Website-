@@ -1,4 +1,4 @@
-
+  
 
 const WISHLIST_STORAGE_KEY = "toyhaven_wishlist";
 
